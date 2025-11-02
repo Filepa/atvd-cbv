@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block center %}
+
 <h2>Lista de Notas</h2>
 <ul>
     {% for n in notes %}
@@ -6,3 +10,5 @@
         <li>Não há notas cadastradas. <a href="{% url 'create_note' %}">Clique aqui para cadastrar</a></li>
     {% endfor %}
 </ul>
+
+{% endblock %}

@@ -1,5 +1,13 @@
-<h2>{{ note.titulo }}</h2>
-<h3>{{ note.secao }}</h3>
-<p>{{ note.descricao }}</p>
-<p>{{ note.data_inicio }}</p>
-<p>{{ note.data_fim }}</p>
+{% extends 'base.html' %}
+
+{% block center %}
+
+<div class="card">
+    <h2>{{ note.titulo }}</h2>
+    <h3>{{ note.secao }}</h3>
+    <p>{{ note.descricao }}</p>
+    <p>{{ note.data_inicio }}</p>
+    <p>{{ note.data_fim }}</p>
+</div>
+
+{% endblock %}
