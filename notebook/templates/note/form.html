@@ -1,31 +1,33 @@
-{% extends 'base.html' %}
-
+{% extends "base.html" %}
 {% block center %}
-
-<h2>Adicionar Nota</h2>
-<form action="" method="post">
+<div class="container">
+  <h1>Anotação</h1>
+  <form method="post">
     {% csrf_token %}
-    <div class="mb-3">
-        <label for="titulo" class="form-label">Título</label>
-        {{ form.titulo }}
+    <div class="form-group">
+      <label for="titulo">Título</label>
+      {{ form.titulo }}
     </div>
-    <div class="mb-3">
-        <label for="secao" class="form-label">Seção</label>
-        {{ form.secao }}
+    <div class="form-group">
+      <label for="secao">Seção</label>
+      {{ form.secao }}
     </div>
-    <div class="mb-3">
-        <label for="descricao" class="form-label">Descrição</label>
-        {{ form.descricao }}
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      {{ form.descricao }}
     </div>
-    <div class="mb-3">
-        <label for="data_inicio" class="form-label">Data de Início</label>
-        {{ form.data_inicio }}
+    <div class="form-group">
+      <label for="secao">Data de Início</label>
+      {{ form.data_inicio }}
     </div>
-    <div class="mb-3">
-        <label for="data_fim" class="form-label">Data Fim</label>
-        {{ form.data_fim }}
+    <div class="form-group">
+      <label for="secao">Data Fim</label>
+      {{ form.data_fim }}
     </div>
-    <button type="submit">Enviar</button>
-</form>
-
+    <div class="btn-group">
+      <button type="submit" class="button primary">Salvar</button>
+      <a href="{% url 'list_note' %}" class="button secondary">Cancelar</a>
+    </div>
+  </form>
+</div>
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block center %}
+<div class="container">
+    <div style='display: flex; justify-content: space-between; margin-bottom: 10px;'>
+        <h1>Minhas Anotações</h1>
+        <a href="{% url 'create_note' %}" class="button primary">Nova Anotação</a>
+    </div>
+    {% for note in notes %}
+        <div class="card">
+            <h2>{{ note.titulo }} ({{ note.secao }})</h2>
+            <p>{{ note.descricao|linebreaks }}</p>
+            <div class="btn-group">
+                <a href="{% url 'detail_note' note.id %}" class="button secondary">Visualizar</a>
+            </div>
+        </div>
+    {% empty %}
+        <p>Você ainda não tem anotações.</p>
+    {% endfor %}
+</div>
+{% endblock %}

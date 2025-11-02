@@ -6,12 +6,12 @@ from .forms import NoteForm
 # Create your views here.
 class NoteListView(ListView):
     model = Note
-    template_name = 'note/listar.html'
+    template_name = 'note/list.html'
     context_object_name = 'notes'
 
 class NoteDetailView(DetailView):
     model = Note
-    template_name = 'note/detalhe.html'
+    template_name = 'note/detail.html'
     context_object_name = 'note'
 
 class NoteCreateView(CreateView):
@@ -28,5 +28,5 @@ class NoteUpdateView(UpdateView):
 
 class NoteDeleteView(DeleteView):
     model = Note
-    template_name = 'note/confirm_delete.html'
+    template_name = 'note/delete.html'
     success_url = reverse_lazy('list_note')
