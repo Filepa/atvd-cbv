@@ -80,3 +80,22 @@ notebook
 
 ## Imagens Ilustrativas:
 
+Criação:
+
+<img src="static/img/create.png">
+
+Detalhes:
+
+<img src="static/img/detail.png">
+
+Listagem:
+
+<img src="static/img/list.png">
+
+Edição:
+
+<img src="static/img/update.png">
+
+Deletar:
+
+<img src="static/img/delete.png">
