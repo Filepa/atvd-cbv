@@ -1,18 +1,17 @@
 {% extends "base.html" %}
 {% block center %}
 <div class="container">
-  <div class="note-detail">
+  <div class="card">
     <h2>Título: {{ note.titulo }}</h2>
     <h6><strong>Seção:</strong> {{ note.secao }}</h6>
     <p><strong>Descrição:</strong> {{ note.descricao|linebreaks }}</p>
     <p><strong>Data Início:</strong> {{ note.data_inicio }} </p>
     <p><strong>Data Fim:</strong> {{ note.data_fim }} </p>
-
-    <div class="btn-group" style='justify-content: space-between;'>
-        <a href="{% url 'update_note' note.id %}" class="button secondary">Editar</a>
-        <a href="{% url 'delete_note' note.id %}" class="button danger">Excluir</a>
-        <a href="{% url 'list_note' %}" class="button primary">Voltar</a>
-    </div>
+  </div>
+  <div class="btn-group" style='justify-content: space-between;'>
+      <a href="{% url 'update_note' note.id %}" class="button secondary">Editar</a>
+      <a href="{% url 'delete_note' note.id %}" class="button danger">Excluir</a>
+      <a href="{% url 'list_note' %}" class="button primary">Voltar</a>
   </div>
 </div>
 {% endblock %}
