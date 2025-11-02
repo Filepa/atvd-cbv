@@ -10,4 +10,7 @@
     <p>{{ note.data_fim }}</p>
 </div>
 
+<a href="{% url 'update_note' note.pk %}">Editar</a>
+<a href="{% url 'delete_note' note.pk %}">Deletar</a>
+
 {% endblock %}

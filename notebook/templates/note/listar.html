@@ -2,10 +2,10 @@
 
 {% block center %}
 
-<h2>Lista de Notas</h2>
+<h2>Lista de Notas</h2><a href="{% url 'create_note' %}"></a>
 <ul>
     {% for n in notes %}
-        <li>{{ n.titulo }} - {{ n.secao }} </li>
+        <li>{{ n.titulo }} - {{ n.secao }} <a href="{% url 'detail_note' n.pk %}">Visualizar</a> </li>
     {% empty %}
         <li>Não há notas cadastradas. <a href="{% url 'create_note' %}">Clique aqui para cadastrar</a></li>
     {% endfor %}
